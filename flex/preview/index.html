@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reddit Sans Flex proof</title>
+<style>
+@font-face{font-family:"Reddit Sans Flex";src:url("../fonts/RedditSansFlex-VF.woff2") format("woff2"),url("../fonts/RedditSansFlex%5Bwdth%2Cwght%5D.ttf") format("truetype");font-weight:200 900;font-stretch:88% 112%}
+:root{--bg:#fff;--fg:#111;--mut:#666;--line:#ddd}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#eee;--mut:#999;--line:#333}}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--fg);font:14px system-ui,sans-serif}
+main{max-width:1100px;margin:auto}h1{font-size:20px}h2{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:28px 0 6px;font-weight:600}
+.row{font-family:"Reddit Sans Flex";border-top:1px solid var(--line);padding:8px 0;font-size:44px;line-height:1.15;white-space:nowrap;overflow:hidden}
+.row small{display:block;font:12px system-ui;color:var(--mut)}
+.ctl{display:flex;gap:24px;flex-wrap:wrap;margin:12px 0}label{display:flex;gap:8px;align-items:center}
+#live{font-family:"Reddit Sans Flex";font-size:64px;line-height:1.1;border:1px solid var(--line);padding:12px;font-variation-settings:"wght" 400,"wdth" 100;overflow-wrap:anywhere}
+</style></head><body><main>
+<h1>Reddit Sans Flex — wght × wdth proof</h1>
+<div class="ctl"><label>wght <input id="w" type="range" min="200" max="900" value="400"><output id="wo">400</output></label>
+<label>wdth <input id="d" type="range" min="88" max="112" value="100"><output id="do">100</output></label></div>
+<div id="live" contenteditable spellcheck="false">Hamburgefonstiv xX 0123 Quixotic jazz</div>
+<script>const l=document.getElementById('live'),w=document.getElementById('w'),d=document.getElementById('d');
+function u(){l.style.fontVariationSettings=`"wght" ${w.value},"wdth" ${d.value}`;wo.textContent=w.value;document.getElementById('do').textContent=d.value}
+w.oninput=d.oninput=u;u();</script>
+<div id="static"></div>
+<script>
+const rows=[[88,"Condensed"],[100,"Normal"],[112,"Expanded"]],txt="Hamburgefonstiv xX *AVWK jq 4ae Ǻçñéü ďťľ ẞǬ";
+let h='';for(const wt of [200,400,900]){h+=`<h2>wght ${wt}</h2>`;for(const [wd,n] of rows)h+=`<div class="row" style='font-variation-settings:"wght" ${wt},"wdth" ${wd}'><small>${n} wdth ${wd}</small>${txt}</div>`}
+document.getElementById('static').innerHTML=h;</script>
+</main></body></html>

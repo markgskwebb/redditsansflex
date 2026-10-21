@@ -16,6 +16,14 @@ The fonts include more than 1,000 glyphs. This character set includes support fo
 
 ChangeLog
 
+21 Oct 2026 (Mark Webb) Reddit Sans Flex 1.100 (derivative of Reddit Sans 1.013/1.014; see flex/)
+- New family name "Reddit Sans Flex": one variable font with a Weight axis (wght 200-900) and a Width axis (wdth 88-112), upright only
+- Width axis merges Reddit Sans (wdth 100) and Reddit Sans Condensed (wdth 88) unchanged, and adds a computed Expanded setting (wdth 112)
+- Expanded is not hand-drawn: horizontal-only extrapolation of Sans away from Condensed, vertical metrics unchanged
+- Expanded sidebearings are never tighter than Normal's; accent offsets are re-derived from anchors
+- Condensed contour order corrected for x, asterisk and dblgravecomb so they interpolate with Sans
+- Non-exporting helper glyphs a.ss08 and overline dropped from the merged source; STAT labels and 24 named instances added
+
 9 Nov 2023 (Stephen Hutchings) Reddit Sans 1.013
 - Update copyright to use GitHub repository URL
 
@@ -91,3 +99,7 @@ D: Creative direction and concepts for Reddit Inc.
 N: Andrew Prinz
 W: http://www.reddit.com
 D: Type direction for Reddit Inc.
+
+N: Mark Webb
+W: https://mkwb.me
+D: Reddit Sans Flex: merged wght x wdth variable font with computed Expanded width

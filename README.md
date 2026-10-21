@@ -1,3 +1,7 @@
+> **Reddit Sans Flex** — this fork adds a single variable font with **weight (200–900) and width (88–112)** axes,
+> including a computed *Expanded* width. See [`flex/`](./flex/) for the fonts, sources and details.
+> Everything below is the upstream Reddit Sans README.
+
 # Reddit Sans
 
 ![Reddit Sans](./documentation/preview.png)
